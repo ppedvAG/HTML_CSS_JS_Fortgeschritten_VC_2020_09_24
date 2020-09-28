@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hintergrundbilder</title>
+    <style>
+        .container::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        div[class^="bg"] {
+            float: left;
+            height: 200px;
+            width: 250px;
+            border: 2px solid black;
+            /* shorthand property */
+            /* 
+                border-width: 2px;
+                border-style: solid;
+                border-color: black;
+             */
+            margin: 20px;
+            /* margin: 5px 10px 20px 0px; */ 
+            /* top -> right -> bottom -> left */
+        }
+
+        .bg-demo01{
+            background-image: url(../images/bg_eule.jpg);
+        }
+
+        .bg-demo02{
+            background-image: url(../images/bg_muster1.jpg);
+        }
+
+        .bg-demo03{
+            background-image: url(../images/bg_demo_owl.png);
+            background-repeat: no-repeat;
+        }
+
+        
+        .bg-demo04{
+            background-image: url(../images/bg_muster1.jpg);
+            background-repeat: repeat-x;
+        }
+
+        
+        .bg-demo05{
+            background-image: url(../images/bg_muster1.jpg);
+            background-repeat: repeat-y;
+        }
+
+        
+        .bg-demo06{
+            background-image: url(../images/bg_demo_owl.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        
+        .bg-demo07{
+            background-image: url(../images/bg_demo_owl.png);
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        }
+
+        
+        .bg-demo08{
+            background-image: url(../images/bg_demo_owl.png);
+            background-repeat: no-repeat;
+            background-position: 100px 20px;
+        }
+
+        .bg-demo09{
+            background-image: url(../images/bg_eule.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        
+        .bg-demo10{
+            background-image: url(../images/bg_eule.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        
+        .bg-demo11{
+            background-image: url(../images/bg_eule.jpg);
+            background-repeat: no-repeat;
+            background-size: 500px 100px;
+        }
+
+        .bg-demo12{
+            background-image: url(../images/bg_muster3.jpg), url(../images/bg_muster2.jpg);
+            background-repeat: repeat-x, repeat-y;
+        }
+
+        
+        .bg-demo13{
+            background-image: url(../images/bg_demo_owl.png), url(../images/bg_eule.jpg);
+            background-repeat: repeat-x, repeat-y;
+        }
+
+        .bg-demo14{
+            /* Kurzschreibweise (shorthand property) */
+            background: url(../images/bg_demo_owl.png) no-repeat center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bg-demo01"></div>
+        <div class="bg-demo02"></div>
+        <div class="bg-demo03"></div>
+        <div class="bg-demo04"></div>
+        <div class="bg-demo05"></div>
+        <div class="bg-demo06"></div>
+        <div class="bg-demo07"></div>
+        <div class="bg-demo08"></div>
+        <div class="bg-demo09"></div>
+        <div class="bg-demo10"></div>
+        <div class="bg-demo11"></div>
+        <div class="bg-demo12"></div>
+        <div class="bg-demo13"></div>
+        <div class="bg-demo14"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farbverläufe</title>
+    <style>
+        body {
+            /*  background-color: rgb(63, 91, 177); */
+            /* background-color: red; */
+            background: radial-gradient(rgb(218, 226, 220), rgb(154, 202, 105));
+            background-attachment: fixed;
+        }
+
+        .container::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        div[class^="grad"] {
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            border: 2px solid black;
+            float: left;
+        }
+
+        .gradient-demo01 {
+            background-color: blue;
+            background: linear-gradient(yellow, blue);
+        }
+
+        .gradient-demo02 {
+            background: linear-gradient(red, orange, yellow, greenyellow, green, turquoise, blue, purple, indigo);
+        }
+
+        .gradient-demo03 {
+            background: linear-gradient(60deg, red, orange, yellow, greenyellow, green, turquoise, blue, purple, indigo);
+        }
+
+        .gradient-demo04 {
+            background: linear-gradient(to right, red, orange, yellow, greenyellow, green, turquoise, blue, purple, indigo);
+        }
+
+        .gradient-demo05 {
+            background: linear-gradient(45deg, red 0%, red 25%, yellow 25%, yellow 50%, green 50%, green 75%, blue 75%, blue 100%);
+        }
+
+        .gradient-demo06 {
+            background: radial-gradient(white, blue);
+        }
+
+        div.gradient-demo07 {
+            width: 350px;
+            background: radial-gradient(white, blue);
+        }
+
+        .gradient-demo08 {
+            background: radial-gradient(50px 50px, white, blue);
+        }
+
+        .gradient-demo09 {
+            background: radial-gradient(50px 50px at top left, white, blue);
+        }
+
+        .gradient-demo10 {
+            background: radial-gradient(50px 50px at 0 0, white, blue);
+        }
+
+        .gradient-demo11 {
+            background: radial-gradient(50px 50px at 10px 70px, white, blue);
+        }
+
+
+        .gradient-demo12 {
+            background: radial-gradient(50px 50px at 10px 70px, rgba(181, 181, 241, 0.5), rgb(28, 28, 128));
+        }
+
+        .gradient-demo13 {
+            background: linear-gradient(rgb(123, 175, 218), rgb(70, 130, 180));
+        }
+
+        .gradient-demo14 {
+            background-color: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gradient-demo01"></div>
+        <div class="gradient-demo02"></div>
+        <div class="gradient-demo03"></div>
+        <div class="gradient-demo04"></div>
+        <div class="gradient-demo05"></div>
+        <div class="gradient-demo06"></div>
+        <div class="gradient-demo07"></div>
+        <div class="gradient-demo08"></div>
+        <div class="gradient-demo09"></div>
+        <div class="gradient-demo10"></div>
+        <div class="gradient-demo11"></div>
+        <div class="gradient-demo12"></div>
+        <div class="gradient-demo13"></div>
+        <div class="gradient-demo14"></div>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quaerat eius earum provident. Ratione tempora
+        exercitationem iste id ducimus, mollitia adipisci modi obcaecati, quae rem nisi et repudiandae nemo sapiente
+        officia reiciendis! Provident numquam ducimus excepturi enim possimus molestiae nisi repudiandae. Vero nesciunt
+        aliquid eum pariatur excepturi culpa modi error officiis, labore laboriosam assumenda doloremque et eaque
+        possimus, illo aperiam beatae! Repudiandae quae alias ducimus velit maxime quasi ea consequatur magni impedit ut
+        iusto consequuntur, aperiam accusantium quas omnis voluptatum sequi atque ad quo itaque voluptates amet animi
+        doloremque vitae. Incidunt dolor ducimus quaerat! Nobis quam explicabo voluptas itaque deleniti aspernatur
+        laboriosam aperiam tempora, non quaerat consequuntur ducimus natus unde omnis? Porro molestias quas labore ut
+        numquam a? Quis, doloremque ex fugiat nobis excepturi officiis ad veritatis illo velit iure nesciunt cum minus
+        quaerat suscipit alias accusantium distinctio, aspernatur ducimus tenetur illum, commodi veniam. Error quo alias
+        sint quisquam, quam tempore ad dolores voluptatum animi illo corrupti explicabo quaerat eius nemo maxime saepe
+        autem incidunt architecto ducimus ut? Numquam natus ratione ducimus facilis rerum vel consequuntur optio esse
+        vitae. Sit tempore dolor nihil eveniet, perferendis ad in impedit provident iste ratione minus ullam maxime
+        praesentium autem reprehenderit libero aspernatur? Iure reiciendis saepe exercitationem fuga quidem ipsum
+        placeat corrupti. Molestiae dolores ipsam iure labore suscipit. Minus, pariatur iusto? Suscipit odit quasi
+        autem! Reprehenderit voluptatibus enim aspernatur natus adipisci quae qui delectus totam provident neque,
+        placeat laborum, ullam saepe. Itaque commodi dolorum voluptatibus, quidem, a fugit aliquam minus excepturi cum
+        rerum quia qui accusamus! Necessitatibus fuga ducimus quaerat architecto. Porro ea cumque, commodi illo sed
+        totam, optio exercitationem aspernatur facilis sapiente tenetur eum culpa similique, voluptates at. Nam cum
+        ipsum, aspernatur provident itaque, doloribus doloremque sunt nesciunt explicabo accusantium amet debitis
+        exercitationem laudantium? Deserunt rem earum, impedit modi quos omnis. Blanditiis delectus neque, eos similique
+        minus ipsa ab aspernatur officiis quibusdam eligendi distinctio harum reiciendis odit exercitationem natus nihil
+        soluta numquam, praesentium ut necessitatibus mollitia laboriosam? Natus veritatis consequatur omnis eligendi
+        harum deleniti dolore neque accusantium ipsum culpa, eius maxime necessitatibus amet, dolores ipsam est ab
+        officia magnam id sequi vero iusto distinctio beatae! Facere inventore excepturi blanditiis saepe asperiores
+        optio amet officia quia. Distinctio ab aut quasi assumenda, placeat sapiente laboriosam at eaque et eos debitis
+        delectus quibusdam aspernatur, deleniti recusandae illum. Non nesciunt doloremque, ab error ipsam debitis minus
+        accusamus placeat, quidem minima ut ratione totam, quasi quibusdam. Et magnam rerum sed hic saepe quo vero
+        maxime repellendus quis, similique facere quam voluptatibus quos ducimus sint? Fuga quo impedit, vel porro
+        veritatis repudiandae architecto assumenda magni quam id possimus cum totam obcaecati, eum quas in. Impedit
+        explicabo laborum saepe consequuntur adipisci ducimus officia, mollitia harum ipsam esse dolorum nam eligendi.
+        Officiis, sit ullam. Expedita, voluptates debitis optio atque quis, accusantium culpa dolorem magni vitae modi,
+        vel cumque explicabo nobis nam beatae! Nostrum in, facere porro, id dicta voluptatem quod aliquid odit dolore
+        deleniti inventore? Nostrum pariatur eaque iure soluta quas atque, dicta saepe modi porro doloremque magni.
+        Excepturi, culpa laborum.
+    </div>
+</body>
+
+</html>

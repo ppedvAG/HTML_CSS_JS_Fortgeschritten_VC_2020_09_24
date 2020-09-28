@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schatten</title>
+    <style>
+        .container::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        div[class^="shadow"]{
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            background-color: chartreuse;
+            float: left;
+        }
+
+        .shadow-demo01{
+            box-shadow: 5px 5px;
+        }
+        .shadow-demo02{
+            box-shadow: 5px 5px 7px;
+        }
+        .shadow-demo03{
+            box-shadow: 5px 5px 7px 10px;
+        }
+        .shadow-demo04{
+            box-shadow: 5px 5px 7px red;
+        }
+        .shadow-demo05{
+            box-shadow: 2px 2px 5px red, 4px 4px 5px yellow, 6px 6px 5px green;
+        }
+        .shadow-demo06{
+            box-shadow: 2px 2px 5px rgb(85, 83, 83), 4px 4px 5px rgb(141, 138, 138), 6px 6px 5px rgb(202, 199, 199);
+        }
+        .shadow-demo07{
+            box-shadow: 2px 2px 5px rgba(85, 83, 83, 0.8), 4px 4px 5px rgba(141, 138, 138, 0.6), 6px 6px 5px rgba(202, 199, 199, 0.4);
+        }
+        .shadow-demo08:hover{
+            box-shadow: 2px 2px 5px rgba(85, 83, 83, 0.8), 4px 4px 5px rgba(141, 138, 138, 0.6), 6px 6px 5px rgba(202, 199, 199, 0.4);
+            cursor: pointer;
+        }
+        .shadow-demo09{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            text-shadow: 20px 20px 5px blue;
+        }
+        .shadow-demo10{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            text-shadow: 1px 1px 3px rgba(73, 72, 72, 0.7);
+        }
+
+        .shadow-demo11{
+            box-shadow: 0 0 10px rgba(63, 61, 61, 0.8);
+        }
+
+        .shadow-demo12{
+            box-shadow: -5px -5px 10px rgba(63, 61, 61, 0.8);
+        }
+        
+        .shadow-demo13{
+            box-shadow: 0 3px 3px rgba(63, 61, 61, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shadow-demo01"></div>
+        <div class="shadow-demo02"></div>
+        <div class="shadow-demo03"></div>
+        <div class="shadow-demo04"></div>
+        <div class="shadow-demo05"></div>
+        <div class="shadow-demo06"></div>
+        <div class="shadow-demo07"></div>
+        <div class="shadow-demo08"></div>
+        <div class="shadow-demo09">Text</div>
+        <div class="shadow-demo10">Text</div>
+        <div class="shadow-demo11"></div>
+        <div class="shadow-demo12"></div>
+        <div class="shadow-demo13"></div>
+    </div>
+</body>
+</html>

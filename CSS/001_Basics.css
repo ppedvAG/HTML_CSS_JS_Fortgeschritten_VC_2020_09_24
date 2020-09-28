@@ -1,0 +1,46 @@
+html{
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    color: darkolivegreen;
+}
+
+ul{
+    font-size: 14px;
+}
+
+
+.em-demo{
+    font-size: 1em;
+}
+
+.rem-demo{
+    font-size: 1rem;
+}
+
+.vh-demo{
+    height: 100vh;
+    background-color: aqua;
+    width: 10vh;
+}
+
+.vw-demo{
+    height: 100px;
+    background-color: cadetblue;
+    width: 100vw;
+}
+
+.vw-demo2{
+    font-size: 2vw;
+}
+
+.percent-demo{
+    height: 100px;
+    background-color: darkblue;
+    width: 100%;
+}

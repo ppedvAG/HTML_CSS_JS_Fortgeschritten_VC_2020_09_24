@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <title>Formulare</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .flex-container{
+            display: flex;
+            width: 250px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            /* border: 1px solid green; */
+        }
+
+        .output{
+            min-width: 10%;
+            padding: 10px;
+            font-family: Consolas, monospace;
+            font-size: 28px;
+            /* border: 1px solid black; */
+        }
+
+        .popup-demo{
+            background-color: gainsboro;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* width: 100%; */
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p>Geben Sie eine Zahl ein und klicken Sie auf "ok".</p>
+
+        <input type="number" id="inp-num" min="0" max="100">
+        <button onclick="checkNum()" id="btn-ok">OK</button>
+
+        <p class="demo01" id="demo01"></p>
+    </div>
+
+    <div class="container">
+        <p>Geben Sie eine Zahl ein und klicken Sie auf "ok".</p>
+
+        <input type="number" id="inp-num2" min="0" max="100">
+        <button id="btn-ok2">OK</button>
+
+        <p class="demo02" id="demo02"></p>
+    </div>
+
+    <div class="flex-container">
+        <div class="output" id="outp-min"></div>
+        <input type="range" min="0" max="100" step="1" id="inp-range" class="inp-range">
+        <div class="output" id="outp-max"></div>
+        <div class="output" id="outp-now"></div>
+    </div>
+
+    <button id="btn-show">SHOW</button>
+
+    <div class="popup-demo" id="popup-demo">
+        Wir verwenden Cookies, sind Sie damit einverstanden?
+        <button id="btn-popup-ok">OK</button>
+    </div>
+
+
+    <script>
+
+
+        /* für Validierungs-Beispiel: */
+        var inpNum = document.getElementById('inp-num');
+        var demo01 = document.getElementById('demo01');
+        var inpNum2 = document.getElementById('inp-num2');
+        var demo02 = document.getElementById('demo02');
+        var btnOK2 = document.getElementById('btn-ok2');
+
+
+        /* für Range-Slider Übung: */
+        var outpMin = document.getElementById('outp-min');
+        var outpMax = document.getElementById('outp-max');
+        var outpNow = document.getElementById('outp-now');
+        var inpRange = document.getElementById('inp-range');
+
+
+        outpMin.innerHTML = inpRange.getAttribute('min');
+        outpMax.innerHTML = inpRange.getAttribute('max');
+        outpNow.innerHTML = inpRange.value;
+
+
+        inpRange.addEventListener('input', function(){
+            outpNow.innerHTML = inpRange.value;
+        });
+
+
+
+
+        /* 
+            welcher Wert ist bei einem bestimmten Attribut eingetragen?
+            mit getAttribute abfragen:
+            alert(inpNum.getAttribute('max')); 
+        */
+
+
+        btnOK2.addEventListener('click', checkNum2);
+
+        // prüfen, ob die Eingabe mit dem geforderten Format übereinstimmt
+        function checkNum() {
+
+            /* eigene Standard-Fehlermeldung schreiben mit setCustomValidity: */
+            /* inpNum.setCustomValidity('Test hat funktioniert!'); */
+
+            if (inpNum.checkValidity() == false) {
+                demo01.innerHTML = inpNum.validationMessage;
+            } else {
+                demo01.innerHTML = 'Gut gemacht!';
+            }
+
+        }
+        function checkNum2() {
+
+            if (inpNum2.checkValidity() == false) {
+                alert(inpNum2.validationMessage);
+            } else {
+                alert('Gut gemacht!');
+            }
+
+        }
+
+
+        /* pop-up-Übung: */
+
+        var popUpDemo = document.getElementById('popup-demo');
+        var btnPopupOk = document.getElementById('btn-popup-ok');
+        var btnShow = document.getElementById('btn-show');
+
+        btnPopupOk.addEventListener('click', function(){
+            /* popUpDemo.style.backgroundColor = 'rgb(255, 0, 0)'; */
+            popUpDemo.style.display = 'none';
+        });
+
+        /* wenn wir etwas wieder zeigen möchten, das mit display none 
+            versteckt wurde, müssen wir sagen, als WAS es wieder angezeigt
+            werden soll (z.B. als Blockelement) */
+        btnShow.addEventListener('click', function(){
+            popUpDemo.style.display = 'block';
+        });
+
+    </script>
+</body>
+
+</html>

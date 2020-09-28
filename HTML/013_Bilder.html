@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilder</title>
+    <style>
+
+        picture{
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <picture>
+        <source srcset="../images/grasshouse_small.jpg" media="(max-width: 640px)">
+        <source srcset="../images/grasshouse_medium.jpg" media="(max-width: 1000px)">
+        <source srcset="../images/grasshouse_big.jpg" media="(max-width: 1200px)">
+        <img src="../images/grasshouse.jpg" alt="grasshouse">
+    </picture>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoklassen</title>
+    <style>
+        /* Pseudoelemente */
+        /* Wir tun so, als wäre da ein html-Tag (das nicht im html-file steht) */
+        .demo01::first-letter {
+            font-size: 42px;
+        }
+
+        .demo02::first-line{
+            color: burlywood;
+        }
+
+        .demo03{
+            /* border: 1px solid black; */
+        }
+
+        .demo03::after{
+            display: block;
+            content: '';
+            /* background-color: cyan; */
+            border-bottom: 2px solid cyan;
+        }
+
+        .demo03::before{
+            /* wir tun so, als wäre vor dem eigentlichen Inhalt dieses Divs
+               noch ein weiteres Element (das nicht im html aufscheint) */
+        }
+
+
+
+
+        /* Pseudoklassen */
+        /* LoVe HAte */
+        /* Link-Visited-Hover-Active */
+        a:link {}
+
+        a:visited {}
+
+        a:hover {
+            color: gold;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        :disabled {
+            /* für Input Felder */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudoklassen und -elemente</h1>
+    <p>Das ist ein <a href="#">Paragraph.</a> </p>
+    <p class="demo01">Das ist ein toller Paragraph.</p>
+    <p class="demo02">
+        <!-- lorem10 = Lorem Text mit 10 Worten -->
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, labore repudiandae quisquam amet
+        maiores architecto, ipsum culpa dolor, veniam praesentium molestiae totam? Nihil error fugit commodi asperiores,
+        voluptas, ab eos impedit est eius quae dolores odit vitae porro. Ad quibusdam reprehenderit praesentium fuga
+        necessitatibus corporis, enim voluptatem incidunt dolor sed repudiandae doloremque debitis! Assumenda maxime
+        voluptatibus nam, illo repellendus minus sapiente cumque quod eveniet eius commodi at molestias et qui non
+        optio. Doloremque hic quibusdam pariatur repellat? Necessitatibus fugit eum suscipit corrupti at dignissimos
+        libero deleniti ullam velit quis quas autem dolor ipsa explicabo expedita accusantium non modi consequatur
+        dolorem alias debitis, itaque error labore odio? A earum necessitatibus illo beatae, ducimus quis similique
+        maxime quod doloribus! Eveniet ab, neque recusandae iure tenetur quam mollitia asperiores vero rerum quisquam id
+        sapiente nisi deserunt doloribus sint aperiam? Quaerat molestiae dolorem asperiores quisquam sed dignissimos!
+        Harum, sint molestiae iusto numquam deleniti, corrupti quia recusandae, temporibus expedita veritatis ut fugiat
+        obcaecati porro at voluptatum repudiandae assumenda. Provident corporis aperiam pariatur perspiciatis veniam rem
+        vero dolor nostrum iure ea in quasi nihil eum aliquam distinctio tempore nam, neque quaerat itaque consequuntur
+        necessitatibus magnam eos adipisci cupiditate? Suscipit voluptate quam explicabo, hic accusantium delectus!
+    </p>
+
+    <div class="demo03">
+        Testtext
+    </div>
+
+</body>
+
+</html>

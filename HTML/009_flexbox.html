@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .flex-container {
+            height: 500px;
+            background-color: darkcyan;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* horizontale Ausrichtung */
+            /* flex-direction: column; */
+            /* flex-direction: column macht nur dann Sinn, wenn der Container
+                eine fixe Höhe hat (sonst alles in 1 Spalte) */
+            align-items: stretch; /* vertikale Ausrichtung */
+        }
+
+        .flex-item {
+            width: 200px;
+            /* height: 200px; */
+            /* margin: 10px; */
+            background-color: dodgerblue;
+            border: 2px solid rgb(17, 49, 82);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+    </div>
+</body>
+
+</html>

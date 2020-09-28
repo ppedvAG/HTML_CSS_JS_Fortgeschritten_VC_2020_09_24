@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektoren</title>
+    <style>
+        /* nur für Übungen!! in der Realität --> .css-file!! */
+
+        /* Universalselektor */
+        *{
+            /* gilt für ALLE! */
+            /* nicht, oder nur mit Vorsicht verwenden! */
+            /* für ÜBUNGEN praktisch: 
+
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+            */
+        }
+
+        /* Typselektor */
+        /* gilt für alle Elemente dieses Typs */
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            /* border: 1px solid gold; */
+        }
+
+
+        /* Klassenselektor */
+        /* gilt für alle Elemente mit dieser Klasse */
+        /* muss nicht für den gleichen Typ sein (wird es aber im Normalfall) */
+        .demo-container{
+            border: 2px solid chartreuse;
+            /* border: 2px solid pink; */
+        }
+
+
+        /* ID-Selektoren */
+        /* ein Element darf sowohl ID als auch Klasse haben */
+        #border-demo{
+            border: 2px solid firebrick;
+        }
+
+
+        /* gilt für beide: */
+        th, td{
+            border: 1px solid black;
+        }
+
+
+        /* Kombinatoren */
+
+        /* Nachfahrenselektor (descendant selector) */
+        div span{
+            color: gold;
+        }
+
+
+        /* Kindselektor (child selector) */
+        div>span{
+            text-decoration: underline;
+        }
+
+
+        /* Geschwisterkombinatoren (sibling selectors) */
+        /* benachbarter Geschwister Kombinator */
+        h1+p{
+            font-size: 10px;
+        }
+
+
+        /* allgemeiner Geschwister Kombinator */
+        h1~p{
+            font-style: italic;
+        }
+
+
+        /* Attributselektoren */
+        /* alle, die ein bestimmtes Attribut haben */
+        a[target]{
+            /* Styling für alle, die ein target-Attribut haben */
+        }
+
+        a[target="_blank"]{
+            /* Styles für alle, die target="blank" haben */
+        }
+
+        /* beginnt mit einer bestimmten Zeichefolge */
+        a[target^="_b"]{
+
+        }
+
+        /* endet mit bestimmtem/r Zeichen/-folge */
+        a[target$="k"]{
+
+        }
+
+        /* enthält bestimmte Zeichenfolge */
+        a[target*="an"]{
+
+        }
+
+        /* Bsp.: */
+        div[class^="container"]{
+            height: 50px;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container01{
+            background-color: gold;
+        }
+        .container02{
+            background-color: greenyellow;
+        }
+        .container03{
+            background-color: lightseagreen;
+        }
+        .container04{
+            background-color: mediumseagreen;
+        }
+
+
+        
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="demo-container">
+
+        <span>Das ist eine Span in einem Div.</span>
+        <p id="border-demo" class="demo-container">Das ist Paragraph Nr.01</p>
+        <p>
+            Das ist Paragraph Nr.02 
+            <span>Das ist eine Span in einem P.</span> 
+        </p>
+        <h1>Das ist eine tolle Überschrift</h1>
+        <p>Das ist Paragraph Nr.03</p>
+        <p>Das ist Paragraph Nr.04</p>
+        <p>Das ist <a href="https://en.wikipedia.org/wiki/Paragraph" target="_blank">Paragraph</a> Nr.05</p>
+        <p>Das ist Paragraph Nr.06</p>
+        <p>Das ist Paragraph Nr.07</p>
+        <p>Das ist Paragraph Nr.08</p>
+        <p>Das ist Paragraph Nr.09</p>
+    </div>
+    <p>Das ist ein Paragraph außerhalb des Div.</p>
+    <p>Das ist ein Paragraph außerhalb des Div.</p>
+    <p>Das ist ein Paragraph außerhalb des Div.</p>
+
+
+    <h1>Spezifität (engl.: specificity)</h1>
+    <div>
+        <ul>
+            <li>Typ</li>
+            <li>Klasse</li>
+            <li>ID</li>
+            <li>Inline</li>
+            <li>!important</li>
+        </ul>
+    </div>
+
+    <div class="container01"></div>
+    <div class="container02"></div>
+    <div class="container03"></div>
+    <div class="container04"></div>
+    <div class="container05"></div>
+    
+</body>
+</html>
